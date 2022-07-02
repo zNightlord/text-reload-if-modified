@@ -21,8 +21,7 @@ bl_addon_info = {
     "name": "Reload if Modified",
     "author": "Dany Lebel (Axon_D)",
     "version": (1,0),
-    "blender": (2, 5, 5),
-    "api": 32949,
+    "blender": (3, 2, 0),
     "location": "Text Editor -> Header Bar -> Reload if Modified",
     "description": "Determine if a text datablock must be reloaded from file in the case that it has changed",
     "warning": "",
@@ -61,7 +60,7 @@ def reload_if_modified(self, context):
 
 
 def register():
-    bpy.types.Text.reload_if_modified = bpy.props.BoolProperty(
+    bpy.types.Text.reload_if_modified : bpy.props.BoolProperty(
                             name='Reload if Modified',
                             description=
                             'Automatically reload text file if it has changed',
